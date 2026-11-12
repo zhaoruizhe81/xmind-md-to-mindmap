@@ -1,3 +1,5 @@
+**English** | [简体中文](README.zh-CN.md)
+
 # xmind-md-to-mindmap
 
 Convert **Markdown → mind map PNG** by reusing XMind web's *own* Markdown converter + official
