@@ -1,0 +1,15 @@
+# deps
+node_modules/
+
+# OS / logs
+.DS_Store
+*.log
+
+# fetched XMind proprietary assets (NOT redistributed); fetch them yourself
+xmind-md-reverse/web-bundles/
+xmind-md-reverse/_inspect/
+xmind-md-reverse/cli/_scratch/
+
+# python
+__pycache__/
+*.pyc

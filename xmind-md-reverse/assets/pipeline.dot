@@ -1,0 +1,20 @@
+digraph G {
+  rankdir=LR;
+  bgcolor="white";
+  node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=14, color="#cbd5e1", fillcolor="#f8fafc", margin="0.18,0.10"];
+  edge [color="#64748b", arrowsize=0.8, fontname="PingFang SC", fontsize=11];
+
+  A [label="用户拖入 .md\n或粘贴文本", fillcolor="#e0f2fe"];
+  B [label="File.arrayBuffer()\nTextEncoder → 字节", fillcolor="#e0f2fe"];
+  C [label="TextDecoder('utf-8')\n→ 字符串", fillcolor="#e0f2fe"];
+  D [label="remark 解析器\nunified + remark-parse\n+ gfm + math\n(关闭 codeIndented)", fillcolor="#fef3c7"];
+  E [label="mdast 抽象语法树\nRoot / heading / list /\nlistItem / table / …", fillcolor="#fef3c7"];
+  F [label="Markdown2XMind\n状态机遍历\ntopicStack + listTypeStack", fillcolor="#dcfce7"];
+  G [label="XMind Topic 树\n(工作簿 JSON)\n标题·子主题·备注·扩展", fillcolor="#dcfce7"];
+  H [label="postProcess\n折叠/图片·引用·公式上提\n根折叠", fillcolor="#dcfce7"];
+  I [label="套默认主题 +\nDataStructureVersion=3", fillcolor="#ede9fe"];
+  J [label="打包 .xmind\n/ 直接建文件", fillcolor="#ede9fe"];
+
+  A->B->C->D->E->F->G->H->I->J;
+  {rank=same; A;}
+}

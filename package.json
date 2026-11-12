@@ -1,0 +1,10 @@
+{
+  "name": "xmind-md-to-mindmap",
+  "version": "0.1.0",
+  "description": "Convert Markdown to XMind-style mind map PNG by reusing XMind web's own converter + official renderer",
+  "type": "module",
+  "bin": { "md2mindmap": "xmind-md-to-mindmap/scripts/md2mindmap.mjs" },
+  "scripts": { "md2mindmap": "node xmind-md-to-mindmap/scripts/md2mindmap.mjs" },
+  "dependencies": { "playwright-core": "^1.65.0" },
+  "license": "MIT"
+}
